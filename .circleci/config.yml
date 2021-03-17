@@ -40,8 +40,8 @@ jobs:
       - run:
           name: myname
           command: echo $MY_NAME
-      - print_pipeline_id: string_to_print
-          string_to_print: $CIRCLE_WORKFLOW_ID
+      - print_pipeline_id:
+          string_to_print: $CIRCLE_WORKFLOW_I
       - error_handler:
           when: on_fail
 
