@@ -37,7 +37,7 @@ jobs:
           name: myname
           command: echo $MY_NAME
       - run:
-          command: print_pipeline_id
+          command: print_pipeline_id $CIRCLE_WORKFLOW_ID
 
 
 # Orchestrate or schedule a set of jobs
