@@ -12,7 +12,9 @@ commands:
 
   error_handler:
     steps:
-      - run: echo ERROR OCCURED!!!!!!
+      - run:
+          command: echo ERROR OCCURED!!!!!!
+          when: on_fail
 
 # Use a package of configuration called an orb.
 orbs:
@@ -42,9 +44,7 @@ jobs:
           command: echo $MY_NAME
       - print_pipeline_id:
           string_to_print: $CIRCLE_WORKFLOW_I
-      - error_handler:
-          when: on_fail
-
+      - error_handler
 
 
 # Orchestrate or schedule a set of jobs
