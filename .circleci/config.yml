@@ -6,7 +6,6 @@ commands:
     parameters:
       string_to_print:
         type: string
-        default: hello yogi
     steps:
       - run: echo << parameters.string_to_print >>
 
@@ -43,7 +42,7 @@ jobs:
           name: myname
           command: echo $MY_NAME
       - print_pipeline_id:
-          string_to_print: $CIRCLE_WORKFLOW_I
+          string_to_print:
       - error_handler
 
 
